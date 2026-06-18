@@ -28,6 +28,10 @@ def evaluate_context(username: str, context: ContextData) -> tuple[float, list[s
         # Unknown user – caller should have validated first; treat as max risk
         return 75.0, ["unknown_user"]
 
+    # ----- Check for First Login (No Baselines) -----
+    if not user["known_devices"]:
+        return 5.0, ["first_login"]
+
     # ----- Rule 1: New device (user-agent not previously seen) -----
     if context.user_agent not in user["known_devices"]:
         score += 25
@@ -47,11 +51,6 @@ def evaluate_context(username: str, context: ContextData) -> tuple[float, list[s
     if user["failed_attempts"] > 2:
         score += 15
         factors.append("multiple_failed_attempts")
-
-    # ----- Rule 5: First login (no baselines yet) -----
-    if len(user["keystroke_baselines"]) == 0:
-        score += 5
-        factors.append("first_login")
 
     # Cap the contextual score at 75
     score = min(score, 75.0)

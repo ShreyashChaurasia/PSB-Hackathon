@@ -11,13 +11,13 @@ TrustShield is a privacy-first, risk-based continuous identity trust framework d
 *   **Behavioral Biometrics (Keystroke Dynamics):** Analyzes key dwell times (how long a key is held) and flight times (interval between keys) using a machine learning engine powered by **Isolation Forest** (unsupervised anomaly detection).
 *   **Rule-Based Context Engine:** Evaluates environmental risk signals including unrecognized devices (user-agent), timezone alterations, screen resolution mismatches, and multiple recent failed login attempts.
 *   **Targeted Real-Time Step-Up MFA:** Dynamically prompts the user with a 6-digit OTP verification check only if the composite risk score exceeds the acceptable threshold.
-*   **Stunning Dark-Theme Dashboard:** A premium, glassmorphism-based financial security interface featuring an animated circular risk gauge, detailed risk factor breakdown, and active session details.
+*   **Stunning Minimalist Dashboard:** A premium, light-theme interface inspired by modern flat design, featuring an animated circular risk gauge, detailed risk factor breakdown, and active session details.
 
 ---
 
 ## Tech Stack
 
-*   **Frontend:** React 18, Vite, Vanilla CSS (Premium Dark Theme design system, custom animations, SVG assets).
+*   **Frontend:** React 18, Vite, Vanilla CSS (Premium Minimalist Light Theme design system, custom animations, SVG assets).
 *   **Backend:** FastAPI (Python), Uvicorn, Pydantic, NumPy, Scikit-Learn (ML modeling).
 
 ---
@@ -76,6 +76,6 @@ We have pre-seeded three demo accounts in the in-memory user store:
 *   **Username:** `test_user` | **Password:** `test789`
 
 ### How to trigger anomalous behaviors:
-1.  **Frictionless Login:** Log in typing at a normal, steady pace. Since it's the first login, it registers your initial baseline.
+1.  **Frictionless First Login:** Log in typing at a normal, steady pace. The system intelligently recognizes it's a first login, bypasses anomaly penalties, and begins registering your initial baseline (factors will show "First Login" and "No Baseline").
 2.  **High Risk (New Device / Timezone):** Try logging in from a different browser or simulated device resolution, or type with highly irregular rhythms (very fast, long pauses between keys). 
 3.  **Step-Up Verification:** The high-risk score will lock the login and prompt you with an OTP modal. You can see the generated 6-digit code printing live on your running backend terminal. Enter it to unlock your dashboard and view the risk analyzer display!

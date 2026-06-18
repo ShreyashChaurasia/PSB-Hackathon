@@ -91,7 +91,7 @@ export default function LoginForm({ onLoginResult, onEnrollSuccess }) {
           {/* Username Field */}
           <div style={fieldWrapStyle}>
             <div style={iconWrapStyle}>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--text-secondary)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
                 <circle cx="12" cy="7" r="4" />
               </svg>
@@ -109,7 +109,7 @@ export default function LoginForm({ onLoginResult, onEnrollSuccess }) {
           {/* Password Field */}
           <div style={fieldWrapStyle}>
             <div style={iconWrapStyle}>
-              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--text-secondary)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                 <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
                 <path d="M7 11V7a5 5 0 0 1 10 0v4" />
               </svg>
@@ -130,14 +130,14 @@ export default function LoginForm({ onLoginResult, onEnrollSuccess }) {
               tabIndex={-1}
             >
               {showPassword ? (
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--text-secondary)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94" />
                   <path d="M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19" />
                   <line x1="1" y1="1" x2="23" y2="23" />
                   <path d="M14.12 14.12a3 3 0 1 1-4.24-4.24" />
                 </svg>
               ) : (
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#94a3b8" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--text-secondary)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z" />
                   <circle cx="12" cy="12" r="3" />
                 </svg>
@@ -193,7 +193,7 @@ export default function LoginForm({ onLoginResult, onEnrollSuccess }) {
 
         {/* Biometric Info Badge */}
         <div style={infoBadgeStyle} className="animate-fadeIn delay-3">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--text-secondary)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
             <path d="M7 11V7a5 5 0 0 1 10 0v4" />
           </svg>
@@ -202,7 +202,7 @@ export default function LoginForm({ onLoginResult, onEnrollSuccess }) {
 
         {/* Mode Toggle */}
         <div style={toggleStyle}>
-          <span style={{ color: '#94a3b8', fontSize: '0.875rem' }}>
+          <span style={{ color: 'var(--text-secondary)', fontSize: '0.875rem' }}>
             {isEnrollMode ? 'Already have an account?' : 'New user?'}
           </span>
           <button onClick={toggleMode} style={linkBtnStyle}>
@@ -243,27 +243,23 @@ const logoContainerStyle = {
 const logoStyle = {
   width: '56px',
   height: '56px',
-  borderRadius: '16px',
-  background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+  borderRadius: '12px',
+  background: 'var(--text-primary)',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  boxShadow: '0 0 30px rgba(59, 130, 246, 0.3)',
 };
 
 const titleStyle = {
   fontSize: '1.75rem',
-  fontWeight: 700,
-  background: 'linear-gradient(135deg, #f1f5f9, #94a3b8)',
-  WebkitBackgroundClip: 'text',
-  WebkitTextFillColor: 'transparent',
-  backgroundClip: 'text',
+  fontWeight: 800,
+  color: 'var(--text-primary)',
   marginBottom: '8px',
   letterSpacing: '-0.025em',
 };
 
 const subtitleStyle = {
-  color: '#94a3b8',
+  color: 'var(--text-secondary)',
   fontSize: '0.925rem',
 };
 
@@ -320,10 +316,10 @@ const infoBadgeStyle = {
   gap: '8px',
   marginTop: '20px',
   padding: '10px 16px',
-  background: 'rgba(59, 130, 246, 0.08)',
-  border: '1px solid rgba(59, 130, 246, 0.15)',
-  borderRadius: '10px',
-  color: '#94a3b8',
+  background: '#f4f4f5',
+  border: '1px solid #e4e4e7',
+  borderRadius: '8px',
+  color: 'var(--text-secondary)',
   fontSize: '0.8rem',
 };
 

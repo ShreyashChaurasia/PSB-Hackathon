@@ -309,14 +309,14 @@ const welcomeTextStyle = {
 const welcomeHeadingStyle = {
   fontSize: '2rem',
   fontWeight: 800,
-  color: '#f1f5f9',
+  color: 'var(--text-primary)',
   letterSpacing: '-0.03em',
   lineHeight: 1.2,
   marginBottom: '8px',
 };
 
 const welcomeSubStyle = {
-  color: '#94a3b8',
+  color: 'var(--text-secondary)',
   fontSize: '1rem',
   lineHeight: 1.6,
 };
@@ -330,7 +330,7 @@ const meterCardStyle = {
 const meterLabelStyle = {
   fontSize: '0.8rem',
   fontWeight: 600,
-  color: '#94a3b8',
+  color: 'var(--text-secondary)',
   letterSpacing: '0.05em',
   textTransform: 'uppercase',
   marginBottom: '4px',
@@ -345,8 +345,8 @@ const sectionHeadingStyle = {
   alignItems: 'center',
   gap: '10px',
   fontSize: '1.15rem',
-  fontWeight: 700,
-  color: '#f1f5f9',
+  fontWeight: 800,
+  color: 'var(--text-primary)',
   marginBottom: '16px',
   letterSpacing: '-0.02em',
 };
@@ -383,7 +383,7 @@ const factorNameStyle = {
 
 const factorDescStyle = {
   fontSize: '0.8rem',
-  color: '#94a3b8',
+  color: 'var(--text-secondary)',
   lineHeight: 1.4,
 };
 
@@ -406,7 +406,7 @@ const sessionItemStyle = {
 const sessionLabelStyle = {
   fontSize: '0.75rem',
   fontWeight: 600,
-  color: '#94a3b8',
+  color: 'var(--text-secondary)',
   textTransform: 'uppercase',
   letterSpacing: '0.05em',
 };
@@ -414,7 +414,7 @@ const sessionLabelStyle = {
 const sessionValueStyle = {
   fontSize: '0.95rem',
   fontWeight: 500,
-  color: '#f1f5f9',
+  color: 'var(--text-primary)',
 };
 
 const howItWorksGridStyle = {
@@ -433,8 +433,8 @@ const howIconWrapStyle = {
   width: '56px',
   height: '56px',
   borderRadius: '14px',
-  background: 'rgba(255, 255, 255, 0.05)',
-  border: '1px solid rgba(255, 255, 255, 0.08)',
+  background: '#f4f4f5',
+  border: '1px solid #e4e4e7',
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
@@ -443,14 +443,14 @@ const howIconWrapStyle = {
 
 const howTitleStyle = {
   fontSize: '1rem',
-  fontWeight: 700,
-  color: '#f1f5f9',
+  fontWeight: 800,
+  color: 'var(--text-primary)',
   marginBottom: '8px',
   letterSpacing: '-0.015em',
 };
 
 const howDescStyle = {
   fontSize: '0.85rem',
-  color: '#94a3b8',
+  color: 'var(--text-secondary)',
   lineHeight: 1.6,
 };

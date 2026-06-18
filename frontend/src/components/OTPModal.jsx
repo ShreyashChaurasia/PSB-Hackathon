@@ -153,19 +153,19 @@ export default function OTPModal({ factors = [], onVerify, onCancel, username })
               style={{
                 ...otpInputStyle,
                 borderColor: status === 'error'
-                  ? 'rgba(239, 68, 68, 0.5)'
+                  ? '#fca5a5'
                   : digit
-                    ? 'rgba(59, 130, 246, 0.5)'
-                    : 'rgba(255, 255, 255, 0.1)',
-                boxShadow: digit ? '0 0 15px rgba(59, 130, 246, 0.15)' : 'none',
+                    ? 'var(--border-dark)'
+                    : 'var(--border-glass)',
+                boxShadow: digit ? '0 0 0 1px var(--border-dark)' : 'none',
               }}
               onFocus={(e) => {
-                e.target.style.borderColor = 'rgba(59, 130, 246, 0.6)';
-                e.target.style.boxShadow = '0 0 20px rgba(59, 130, 246, 0.2)';
+                e.target.style.borderColor = 'var(--border-dark)';
+                e.target.style.boxShadow = '0 0 0 1px var(--border-dark)';
               }}
               onBlur={(e) => {
-                e.target.style.borderColor = digit ? 'rgba(59, 130, 246, 0.5)' : 'rgba(255, 255, 255, 0.1)';
-                e.target.style.boxShadow = digit ? '0 0 15px rgba(59, 130, 246, 0.15)' : 'none';
+                e.target.style.borderColor = digit ? 'var(--border-dark)' : 'var(--border-glass)';
+                e.target.style.boxShadow = digit ? '0 0 0 1px var(--border-dark)' : 'none';
               }}
             />
           ))}
@@ -196,8 +196,8 @@ export default function OTPModal({ factors = [], onVerify, onCancel, username })
 
         {/* Username info */}
         {username && (
-          <p style={{ textAlign: 'center', color: '#94a3b8', fontSize: '0.8rem', marginBottom: '4px' }}>
-            Verifying as <span style={{ color: '#f1f5f9', fontWeight: 600 }}>{username}</span>
+          <p style={{ textAlign: 'center', color: 'var(--text-secondary)', fontSize: '0.8rem', marginBottom: '4px' }}>
+            Verifying as <span style={{ color: 'var(--text-primary)', fontWeight: 600 }}>{username}</span>
           </p>
         )}
 
@@ -241,9 +241,9 @@ const overlayStyle = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  background: 'rgba(0, 0, 0, 0.6)',
-  backdropFilter: 'blur(8px)',
-  WebkitBackdropFilter: 'blur(8px)',
+  background: 'rgba(0, 0, 0, 0.2)',
+  backdropFilter: 'blur(4px)',
+  WebkitBackdropFilter: 'blur(4px)',
   padding: '20px',
 };
 
@@ -274,14 +274,14 @@ const warningIconStyle = {
 
 const headingStyle = {
   fontSize: '1.35rem',
-  fontWeight: 700,
-  color: '#f1f5f9',
+  fontWeight: 800,
+  color: 'var(--text-primary)',
   marginBottom: '8px',
   letterSpacing: '-0.025em',
 };
 
 const subheadingStyle = {
-  color: '#94a3b8',
+  color: 'var(--text-secondary)',
   fontSize: '0.9rem',
   marginBottom: '20px',
   lineHeight: 1.5,
@@ -309,10 +309,10 @@ const otpInputStyle = {
   fontSize: '1.4rem',
   fontWeight: 700,
   fontFamily: 'Inter, monospace',
-  background: 'rgba(17, 24, 39, 0.8)',
-  border: '2px solid rgba(255, 255, 255, 0.1)',
-  borderRadius: '12px',
-  color: '#f1f5f9',
+  background: '#ffffff',
+  border: '2px solid var(--border-glass)',
+  borderRadius: '8px',
+  color: 'var(--text-primary)',
   outline: 'none',
   transition: 'all 0.2s ease',
   caretColor: '#3b82f6',

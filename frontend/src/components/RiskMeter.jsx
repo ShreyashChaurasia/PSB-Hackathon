@@ -89,7 +89,6 @@ export default function RiskMeter({ score = 0, level = 'LOW' }) {
     <div style={containerStyle}>
       <div style={{
         ...glowWrapStyle,
-        boxShadow: `0 0 60px ${glowColor}, 0 0 120px ${glowColor.replace('0.4', '0.15')}`,
       }}>
         <svg width={size} height={size / 2 + 30} viewBox={`0 0 ${size} ${size / 2 + 30}`}>
           {/* Glow filter */}
@@ -112,7 +111,7 @@ export default function RiskMeter({ score = 0, level = 'LOW' }) {
           <path
             d={bgPath}
             fill="none"
-            stroke="rgba(255, 255, 255, 0.06)"
+            stroke="#e4e4e7"
             strokeWidth={strokeWidth}
             strokeLinecap="round"
           />
@@ -125,7 +124,6 @@ export default function RiskMeter({ score = 0, level = 'LOW' }) {
               stroke={color}
               strokeWidth={strokeWidth}
               strokeLinecap="round"
-              filter="url(#glow)"
               style={{
                 transition: 'stroke 0.3s ease',
               }}
@@ -142,7 +140,7 @@ export default function RiskMeter({ score = 0, level = 'LOW' }) {
                 key={tick}
                 x1={inner.x} y1={inner.y}
                 x2={outer.x} y2={outer.y}
-                stroke="rgba(255, 255, 255, 0.2)"
+                stroke="#d4d4d8"
                 strokeWidth="1.5"
               />
             );
@@ -167,7 +165,7 @@ export default function RiskMeter({ score = 0, level = 'LOW' }) {
             x={center}
             y={center + 20}
             textAnchor="middle"
-            fill="#94a3b8"
+            fill="#71717a"
             fontSize="11"
             fontWeight="600"
             fontFamily="Inter, sans-serif"
